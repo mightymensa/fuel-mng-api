@@ -37,7 +37,7 @@ Route.get('/make', async () => {
     return { success: false }
   }
 })
-Route.get('/models/:ID', async (REQ) => {
+Route.get('/models', async (REQ) => {
   const car_make = REQ.request['requestData'].car_make
   const { data, status } = await axios.get(
     'https://carapi.app/api/models?limit=500&year=2020&make=' + car_make,
